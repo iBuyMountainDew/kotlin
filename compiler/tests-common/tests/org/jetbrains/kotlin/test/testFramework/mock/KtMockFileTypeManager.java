@@ -47,6 +47,7 @@ public class KtMockFileTypeManager extends FileTypeManager {
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public void registerFileType(@NotNull FileType type, @NotNull List<FileNameMatcher> defaultAssociations) {
     }
 
@@ -86,19 +87,23 @@ public class KtMockFileTypeManager extends FileTypeManager {
 
     @Override
     @NotNull
+    @SuppressWarnings("deprecation")
     public String[] getAssociatedExtensions(@NotNull FileType type) {
         return ArrayUtil.EMPTY_STRING_ARRAY;
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public void addFileTypeListener(@NotNull FileTypeListener listener) {
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public void removeFileTypeListener(@NotNull FileTypeListener listener) {
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public FileType getKnownFileTypeOrAssociate(@NotNull VirtualFile file) {
         return file.getFileType();
     }
@@ -155,6 +160,7 @@ public class KtMockFileTypeManager extends FileTypeManager {
 
     @NotNull
     @Override
+    @SuppressWarnings("deprecation")
     public FileType detectFileTypeFromContent(@NotNull VirtualFile file) {
         return UnknownFileType.INSTANCE;
     }

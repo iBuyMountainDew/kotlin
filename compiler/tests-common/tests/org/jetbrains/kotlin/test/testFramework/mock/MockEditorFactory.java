@@ -105,6 +105,7 @@ public class MockEditorFactory extends EditorFactory {
   }
 
   @Override
+  @SuppressWarnings("deprecation")
   public void addEditorFactoryListener(@NotNull EditorFactoryListener listener) {
   }
 
@@ -113,6 +114,7 @@ public class MockEditorFactory extends EditorFactory {
   }
 
   @Override
+  @SuppressWarnings("deprecation")
   public void removeEditorFactoryListener(@NotNull EditorFactoryListener listener) {
   }
 
