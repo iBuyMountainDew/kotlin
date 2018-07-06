@@ -44,7 +44,7 @@ object KotlinPackageSourcesMemberNamesIndex : FileBasedIndexExtension<String, Co
             if (!ktFile.isScript()) {
                 mapOf(packageName to ktFile.declarations.mapNotNullTo(hashSetOf(), KtDeclaration::getName))
             } else {
-                mapOf(packageName to listOfNotNull(ktFile.script?.name))
+                mapOf(packageName to listOfNotNull(ktFile.script?.name).toHashSet())
             }
         }
 }
